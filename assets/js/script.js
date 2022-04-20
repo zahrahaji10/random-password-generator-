@@ -1,6 +1,13 @@
 // Assignment Code
 const generateBtn = document.querySelector("#generate");
 
+/* Criteria
+lowercase "abcdefghijklmnopqrstuvwxyz"
+uppercase "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+numeric "0123456789"
+special characters " !\"#$%&'()*+,-./:;<=>?@[]^_`{|}~"
+
+
 // main function to generate the random password
 const generatePassword = () => {
   /*
@@ -18,3 +25,5 @@ const writePassword = () => {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+console.log("hi");
