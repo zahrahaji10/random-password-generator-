@@ -37,19 +37,28 @@ const generatePassword = () => {
   const hasSpecialCharacter = confirm(
     "Would you like to have uppercase characters in you password"
   );
-  console.log(
-    passwordLength,
-    hasUppercase,
-    hasLowercase,
-    hasnumeric,
-    hasSpecialCharacter
-  );
 
-  // //declare all password criteria
-  // const lowercase = ["abcdefghijklmnopqrstuvwxyz"];
-  // const uppercase = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
-  // const numeric = ["0123456789"];
-  // const specialCharacters = [" !\"#$%&'()*+,-./:;<=>?@[]^_`{|}~"];
+  // create a random password function
+  const createRandomPassword = () => {
+    let passwordCriteriaArray = [
+      hasUppercase,
+      hasLowercase,
+      hasnumeric,
+      hasSpecialCharacter,
+    ];
+    let finalRandomPasswordArray = [];
+
+    if (passwordCriteriaArray[0]) {
+      finalRandomPasswordArray.push(uppercase);
+    }
+  };
+  createRandomPassword();
+  //declare all password criteria
+
+  const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const lowercase = "abcdefghijklmnopqrstuvwxyz";
+  const numeric = "0123456789";
+  const specialCharacters = " !\"#$%&'()*+,-./:;<=>?@[]^_`{|}~";
 };
 
 //   const getPasswordLength = prompt(
