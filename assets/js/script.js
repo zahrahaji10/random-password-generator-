@@ -1,12 +1,19 @@
 // Assignment Code
 const generateBtn = document.querySelector("#generate");
 
+// declaring password criteria
+const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const lowercase = "abcdefghijklmnopqrstuvwxyz";
+const numeric = "0123456789";
+const specialCharacters = " !\"#$%&'()*+,-./:;<=>?@[]^_`{|}~";
+let userPasswordConfirms;
+
 // main function to generate the random password
 const generatePassword = () => {
   // calling the get password length function
   const passwordLength = getPasswordLength();
 
-  // prompt user to get the password length
+  // prompt user password length input and validate
   function getPasswordLength() {
     const passwordLength = prompt(
       "How many characters do you want your password to have. Please enter between 8 and 128 characters"
@@ -16,16 +23,9 @@ const generatePassword = () => {
       return convertPasswordLength;
     } else {
       alert("Please enter a valid number");
-      getPasswordLength();
+      return;
     }
   }
-
-  // declaring password criteria
-  const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  const lowercase = "abcdefghijklmnopqrstuvwxyz";
-  const numeric = "0123456789";
-  const specialCharacters = " !\"#$%&'()*+,-./:;<=>?@[]^_`{|}~";
-  let userPasswordConfirms;
 
   //prompting user to select the password criteria's
   const passwordCriteria = () => {
