@@ -3,6 +3,9 @@ const generateBtn = document.querySelector("#generate");
 
 // main function to generate the random password
 const generatePassword = () => {
+  // calling the get password length function
+  const passwordLength = getPasswordLength();
+
   // prompt user to get the password length
   function getPasswordLength() {
     const passwordLength = prompt(
@@ -17,17 +20,15 @@ const generatePassword = () => {
     }
   }
 
-  // calling the get password length function
-  const passwordLength = getPasswordLength();
-
   // declaring password criteria
   const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   const lowercase = "abcdefghijklmnopqrstuvwxyz";
   const numeric = "0123456789";
   const specialCharacters = " !\"#$%&'()*+,-./:;<=>?@[]^_`{|}~";
+  let userPasswordConfirms;
 
-  //prompting user to select choices of the password criteria
-  const getPasswordCriteria = () => {
+  //prompting user to select the password criteria's
+  const passwordCriteria = () => {
     // declaring variables for all criteria
     const hasUppercase = confirm(
       "Would you like to have uppercase characters in you password"
@@ -68,18 +69,39 @@ const generatePassword = () => {
           finalRandomPasswordArray.push(specialCharacters);
       } else {
         alert("Please select at least one criteria for your password");
-        getPasswordCriteria();
+        passwordCriteria();
       }
+
       // returning function with final password array
       return finalRandomPasswordArray;
     };
 
     // calling create random password function
-    return createRandomPassword();
+    userPasswordConfirms = createRandomPassword();
   };
 
   //calling get password criteria function
-  getPasswordCriteria();
+  passwordCriteria();
+
+  let password = "";
+  // loop for selecting random category from user password confirms
+  for (let i = 0; i < passwordLength; i++) {
+    //creating a index to get a random category
+    const randomCategoryIndex = Math.floor(
+      Math.random() * userPasswordConfirms.length
+    );
+    //using the index to get a string of characters from confirmed user password confirms array
+    const confirmedPasswordCriteriaArray =
+      userPasswordConfirms[randomCategoryIndex];
+    //splitting each individual string items into an array
+    const categoryArray = confirmedPasswordCriteriaArray.split("");
+    //using a index to randomly select characters from an array
+    const randomIndex = Math.floor(Math.random() * categoryArray.length);
+    //joining the separate randomly selected characters array into a password variable
+    password += categoryArray[randomIndex];
+  }
+  // returning the string of selected characters array to display as password
+  return password;
 };
 
 // declare the password criteria
