@@ -6,6 +6,8 @@ The use of common and simple passwords increases the risk for hackers to get acc
 
 ## Application of Deployed Webpage
 
+https://zahrahaji10.github.io/random-password-generator-/
+
 ## Website Journey Pathway
 
 The user clicks the generate password bottom to initiate the first question.
@@ -20,7 +22,7 @@ After inputting an acceptable number, the user is presented with four question o
 
 <img width="821" alt="criteria" src="https://user-images.githubusercontent.com/102627226/164972623-789112c0-2814-4537-8589-97316a211135.png">
 
-Once the user has selected a at least one of the criteria's, the password is generated.
+Once the user has selected at least one of the criteria's, the password is generated.
 
 <img width="865" alt="final-password" src="https://user-images.githubusercontent.com/102627226/164974711-bcaebb57-ea2f-495c-bca0-8ed9476415e5.png">
 

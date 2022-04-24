@@ -22,12 +22,9 @@ const getPasswordLength = () => {
     return;
   }
 };
-<<<<<<< HEAD
 
-=======
->>>>>>> cf09dbcfc62cf08e930dd87fde78a71d2f4908f4
 //prompting user to select the password criteria's
-const passwordCriteria = () => {
+function passwordCriteria() {
   const finalRandomPasswordArray = [];
   // declaring variables for all criteria
   const hasUppercase = confirm(
@@ -42,11 +39,7 @@ const passwordCriteria = () => {
   const hasSpecialCharacter = confirm(
     "Would you like to have uppercase characters in you password"
   );
-<<<<<<< HEAD
-  // check that at least one of the option was selected
-=======
-  // check that atleast one of the option was selected
->>>>>>> cf09dbcfc62cf08e930dd87fde78a71d2f4908f4
+
   if (hasLowercase || hasUppercase || hasSpecialCharacter || hasNumeric) {
     if (hasUppercase) {
       finalRandomPasswordArray.push(uppercase);
@@ -70,7 +63,7 @@ const passwordCriteria = () => {
     alert("Please select at least one criteria for your password");
     passwordCriteria();
   }
-};
+}
 
 // main function to generate the random password
 const generatePassword = () => {
