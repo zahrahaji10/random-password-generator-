@@ -14,10 +14,12 @@ const getPasswordLength = () => {
     "How many characters do you want your password to have. Please enter between 8 and 128 characters"
   );
   const passLengthNum = parseInt(passwordLength, 10);
+  //validate user password length input
   if (passLengthNum >= 8 && passLengthNum <= 128) {
     // return the password length
     return passLengthNum;
   } else {
+    // alert user to re-try input a correct number
     alert("Please enter a valid number");
     return;
   }
@@ -42,17 +44,18 @@ function passwordCriteria() {
   // pushing each criteria arrays the user selects to the final array
   if (hasLowercase || hasUppercase || hasSpecialCharacter || hasNumeric) {
     if (hasUppercase) {
+      // push if user has uppercase characters confirmed
       finalRandomPasswordArray.push(uppercase);
     }
-
+    // push if user has lowercase character confirmed
     if (hasLowercase) {
       finalRandomPasswordArray.push(lowercase);
     }
-
+    // push if user has has numeric character confirmed
     if (hasNumeric) {
       finalRandomPasswordArray.push(numeric);
     }
-
+    // push if user has special characters confirmed
     if (hasSpecialCharacter) {
       finalRandomPasswordArray.push(specialCharacters);
     }
