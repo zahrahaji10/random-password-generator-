@@ -28,6 +28,6 @@ Once the user has selected at least one of the criteria's, the password is gener
 
 ## Technologies
 
--HTML
--CSS
--JavaScript
+*HTML
+*CSS
+\*JavaScript
