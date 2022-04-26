@@ -13,10 +13,10 @@ const getPasswordLength = () => {
   const passwordLength = prompt(
     "How many characters do you want your password to have. Please enter between 8 and 128 characters"
   );
-  const passLength = parseInt(passwordLength, 10);
-  if (passLength >= 8 && passLength <= 128) {
+  const passLengthNum = parseInt(passwordLength, 10);
+  if (passLengthNum >= 8 && passLengthNum <= 128) {
     // return the password length
-    return passLength;
+    return passLengthNum;
   } else {
     alert("Please enter a valid number");
     return;
@@ -39,7 +39,7 @@ function passwordCriteria() {
   const hasSpecialCharacter = confirm(
     "Would you like to have uppercase characters in you password"
   );
-
+  // pushing each criteria arrays the user selects to the final array
   if (hasLowercase || hasUppercase || hasSpecialCharacter || hasNumeric) {
     if (hasUppercase) {
       finalRandomPasswordArray.push(uppercase);
