@@ -63,8 +63,7 @@ function passwordCriteria() {
     return finalRandomPasswordArray;
   } else {
     // start over if they don't select anything
-    alert("Please select at least one criteria for your password");
-    passwordCriteria();
+    return alert("Please select at least one criteria for your password");
   }
 }
 
