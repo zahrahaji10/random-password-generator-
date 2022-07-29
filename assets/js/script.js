@@ -20,7 +20,7 @@ const getPasswordLength = () => {
     return passLengthNum;
   } else {
     // alert user to re-try input a correct number
-    alert("Please enter a valid number");
+    alert("Please enter a valid number between 8 and 128");
     return;
   }
 };
